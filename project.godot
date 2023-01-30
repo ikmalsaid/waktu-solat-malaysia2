@@ -22,6 +22,8 @@ window/size/height=603
 window/size/resizable=false
 window/size/borderless=true
 window/handheld/orientation="portrait"
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [gui]
 
