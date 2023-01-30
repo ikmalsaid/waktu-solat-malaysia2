@@ -1,2 +1,2 @@
-# GDevelop-PrayerTimeTool2
-It's time to pray.
+# Godot-WaktuSolatMalaysia
+Malaysia's Prayer Time Tool
