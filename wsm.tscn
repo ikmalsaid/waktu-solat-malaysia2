@@ -1,0 +1,184 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://wsm.gd" type="Script" id=1]
+[ext_resource path="res://fonts/clock.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/mobo.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/more.tres" type="DynamicFont" id=4]
+[ext_resource path="res://images/sunset.png" type="Texture" id=5]
+[ext_resource path="res://montserrat.tres" type="Theme" id=6]
+[ext_resource path="res://fonts/date.tres" type="DynamicFont" id=7]
+[ext_resource path="res://fonts/prayer_re.tres" type="DynamicFont" id=8]
+[ext_resource path="res://fonts/prayer_bold.tres" type="DynamicFont" id=9]
+
+[sub_resource type="Theme" id=3]
+
+[node name="wsm" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 32.0, 575.0, 466.0 ],
+"_edit_vertical_guides_": [ 693.0, 26.0 ]
+}
+
+[node name="img" type="CenterContainer" parent="."]
+margin_right = 720.0
+margin_bottom = 603.0
+
+[node name="sunset" type="TextureRect" parent="img"]
+margin_right = 720.0
+margin_bottom = 603.0
+texture = ExtResource( 5 )
+
+[node name="state" type="OptionButton" parent="."]
+margin_left = 28.0
+margin_top = 548.0
+margin_right = 519.0
+margin_bottom = 575.0
+hint_tooltip = "Please select a state and wait for the prayer time to refresh."
+theme = ExtResource( 6 )
+text = "Click here to select a state..."
+flat = true
+
+[node name="time" type="RichTextLabel" parent="."]
+margin_left = 326.0
+margin_top = 12.0
+margin_right = 692.0
+margin_bottom = 112.0
+grow_horizontal = 0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[right]12:45:00"
+text = "12:45:00"
+fit_content_height = true
+scroll_active = false
+
+[node name="date" type="RichTextLabel" parent="."]
+margin_left = 467.0
+margin_top = 96.0
+margin_right = 690.0
+margin_bottom = 147.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode_enabled = true
+bbcode_text = "[right]29/01/2023"
+text = "29/01/2023"
+fit_content_height = true
+scroll_active = false
+
+[node name="head" type="RichTextLabel" parent="."]
+margin_left = 27.0
+margin_top = 488.0
+margin_right = 692.0
+margin_bottom = 554.0
+custom_fonts/bold_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[right][b]Welcome to Waktu Solat Malaysia[/b]
+To begin, please select a state using the option button below."
+text = "Welcome to Waktu Solat Malaysia
+To begin, please select a state using the option button below."
+fit_content_height = true
+scroll_active = false
+
+[node name="credit" type="RichTextLabel" parent="."]
+margin_left = 542.0
+margin_top = 551.0
+margin_right = 698.0
+margin_bottom = 575.0
+hint_tooltip = "Waktu Solat Malaysia
+-----------------------------
+Godot Engine 3.5.1
+Release on: 30/1/23"
+theme = ExtResource( 6 )
+tab_size = 1
+text = "(C) 2023 Ikmal Said"
+
+[node name="request" type="HTTPRequest" parent="."]
+
+[node name="imsak" type="RichTextLabel" parent="." groups=["timelist"]]
+margin_left = 440.0
+margin_top = 182.0
+margin_right = 692.0
+margin_bottom = 222.0
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[right][b]Imsak[/b] 39:23"
+text = "Imsak 39:23"
+scroll_active = false
+
+[node name="subuh" type="RichTextLabel" parent="." groups=["timelist"]]
+margin_left = 440.0
+margin_top = 221.0
+margin_right = 692.0
+margin_bottom = 261.0
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[right][b]Subuh[/b] 39:23"
+text = "Subuh 39:23"
+scroll_active = false
+
+[node name="syuruk" type="RichTextLabel" parent="." groups=["timelist"]]
+margin_left = 440.0
+margin_top = 260.0
+margin_right = 692.0
+margin_bottom = 300.0
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[right][b]Syuruk[/b] 39:23"
+text = "Syuruk 39:23"
+scroll_active = false
+
+[node name="zuhur" type="RichTextLabel" parent="." groups=["timelist"]]
+margin_left = 440.0
+margin_top = 299.0
+margin_right = 692.0
+margin_bottom = 339.0
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[right][b]Zuhur[/b] 39:23"
+text = "Zuhur 39:23"
+scroll_active = false
+
+[node name="asar" type="RichTextLabel" parent="." groups=["timelist"]]
+margin_left = 440.0
+margin_top = 338.0
+margin_right = 692.0
+margin_bottom = 378.0
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[right][b]Asar[/b] 39:23"
+text = "Asar 39:23"
+scroll_active = false
+
+[node name="maghrib" type="RichTextLabel" parent="." groups=["timelist"]]
+margin_left = 440.0
+margin_top = 377.0
+margin_right = 692.0
+margin_bottom = 417.0
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[right][b]Maghrib[/b] 39:23"
+text = "Maghrib 39:23"
+scroll_active = false
+
+[node name="isyak" type="RichTextLabel" parent="." groups=["timelist"]]
+margin_left = 440.0
+margin_top = 419.0
+margin_right = 692.0
+margin_bottom = 459.0
+custom_fonts/bold_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[right][b]Isyak[/b] 39:23"
+text = "Isyak 39:23"
+scroll_active = false
+
+[connection signal="item_selected" from="state" to="." method="_on_state_item_selected"]
+[connection signal="request_completed" from="request" to="." method="_on_request_request_completed"]
